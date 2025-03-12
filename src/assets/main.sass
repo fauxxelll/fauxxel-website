@@ -1,0 +1,79 @@
+@use "sass:color"
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+$color-bg: #242424
+$color-text: #EEEEEE
+
+$font-basic: "Kavivanar", sans-serif;
+$font-highlight: "Protest Revolution", sans-serif;
+
+body
+  background: $color-bg
+  color: $color-text
+  font-family: $font-basic
+  font-weight: 200
+  font-style: normal
+  font-size: 1em
+
+a
+  color: $color-text
+
+.highlight
+  font-family: $font-highlight
+  font-weight: 400
+  font-style: normal
+
+#text-name
+  font-size: 3em
+  transform: translateX(-2rem) rotate(-5deg)
+
+#float-text-big
+  position: absolute
+  font-size: 50em
+  z-index: -999
+  width: 100%
+  top: -5%
+  color: color.scale($color-bg, $lightness: 1%)
+  font-family: "Lacquer", sans-serif
+
+#profile-image
+  top: 10%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  box-shadow: 50px white inset
+  grid-area: two
+
+#profile-image > img
+  border-radius: 10px
+
+#cb-socials
+  display: flex
+  flex-direction: row
+
+#cb-socials > *
+  margin: 10px
+
+#descriptor-text
+  margin-left: 5%
+  font-size: 1.2em
+
+#socials-text
+  font-size: 1.2em
+
+#root-flex
+  margin-top: 6%
+  display: grid
+  grid-template-areas: "one . two"
+
+@media only screen and (max-width: 700px)
+  #root-flex
+    display: flex
+    flex-direction: column
+
+#texts
+  grid-area: one
