@@ -11,8 +11,7 @@ defineProps(["speed", "space"])
 
 <template>
   <div>
-    <vue-marquee-slider v-if="!FloatTextState.refresh" id="marquee-slider-title" :speed="speed" :space="space" autoWidth
-      :repeat="10">
+    <vue-marquee-slider id="marquee-slider-title" :speed="speed" :space="space" autoWidth :repeat="10">
       <span>{{ FloatTextState.overwrite_text }}</span>
     </vue-marquee-slider>
   </div>
